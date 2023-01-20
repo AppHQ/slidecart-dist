@@ -1,1 +1,10 @@
-window.SLIDECART === 100 || function () { var e = "https://cdn.jsdelivr.net/gh/apphq/slidecart-dist@master/slidecarthq.js?" + (new Date).getTime(), t = document.createElement("script"); t.type = "text/javascript", t.src = e, document.querySelector("body").appendChild(t) }();
+if (!window.SLIDECART) {
+  (function () {
+    var url = 'https://cdn.jsdelivr.net/gh/apphq/slidecart-dist@latest/slidecarthq.js?' + new Date().getTime()
+    var s = document.createElement('script')
+    s.type = 'text/javascript'
+    s.src = url
+    var x = document.querySelector('body')
+    x.appendChild(s)
+  })()
+}
